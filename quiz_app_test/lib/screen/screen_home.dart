@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:quiz_app_test/model/model_quiz.dart';
+import 'package:quiz_app_test/screen/screen_quiz.dart';
 
 class HomeScreen extends StatefulWidget{
   @override
@@ -7,6 +9,24 @@ class HomeScreen extends StatefulWidget{
 }
 
 class HomeScreenState extends State<HomeScreen>{
+  List<Quiz> quizs = [ //Quiz dummy data
+    Quiz.fromMap({
+      'title': 'test01',
+      'candidates': ['a','b','c','d'],
+      'answer': 0,
+    }),
+    Quiz.fromMap({
+      'title': 'test02',
+      'candidates': ['a','b','c','d'],
+      'answer': 0,
+    }),
+    Quiz.fromMap({
+      'title': 'test03',
+      'candidates': ['a','b','c','d'],
+      'answer': 0,
+    })
+  ];
+
   @override
   Widget build(BuildContext context) {
     //반응형 UI : MediaQuery 현재 기기의 여러가지 상태정보 알수있음.
@@ -103,7 +123,15 @@ class HomeScreenState extends State<HomeScreen>{
               style: TextStyle(color: Colors.white),
             ),
             color: Colors.blueAccent,
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => QuizScreen(
+                      quizs: quizs,
+                  ),
+                  ),
+              );
+            },
           ),
         ),
       )
