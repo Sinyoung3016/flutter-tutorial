@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:quiz_app_test/model/model_quiz.dart';
+import 'package:quiz_app_test/screen/screen_result.dart';
 import 'package:quiz_app_test/widget/widget_candidates.dart';
 
 
@@ -101,6 +102,12 @@ class QuizScreenState extends State<QuizScreen>{
                     //답을 작성한 상태
                     if(currentIndex == widget.quizs.length - 1) {
                       //결과보기
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ResultScreen(
+                                      answers: answers,
+                                      quizs: widget.quizs)));
                     }
                     else{
                       //다음문제로
