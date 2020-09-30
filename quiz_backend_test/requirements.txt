@@ -1,0 +1,11 @@
+asgiref @ file:///home/conda/feedstock_root/build_artifacts/asgiref_1592528583041/work
+certifi==2020.6.20
+dj-database-url==0.5.0
+Django==2.2
+django-cors-headers @ file:///home/conda/feedstock_root/build_artifacts/django-cors-headers_1593129968237/work
+djangorestframework @ file:///home/conda/feedstock_root/build_artifacts/djangorestframework_1601312268278/work
+psycopg2 @ file:///C:/ci/psycopg2_1594303009470/work
+pytz==2020.1
+sqlparse==0.3.1
+whitenoise==4.1.4
+wincertstore==0.2
